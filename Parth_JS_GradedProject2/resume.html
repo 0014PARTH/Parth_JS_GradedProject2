@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="navigation">
+        <button id="prev-btn" onclick="showPrevious()">Previous</button>
+        <button id="next-btn" onclick="showNext()">Next</button>
+        <input type="text" id="job-search" placeholder="Search by job title">
+        <button onclick="filterByJob()">Search</button>
+    </div>
+
+    <div id="resume-container">
+        <div class="header">
+            <h2 id="applicant-name"></h2>
+            <p id="applied-for"></p>
+        </div>
+        <div class="content">
+            <div class="sidebar">
+                <div class="personal-info">
+                    <h3>Personal Information</h3>
+                    <p id="phone"></p>
+                    <p id="email"></p>
+                    <a id="linkedin" href="" target="_blank">LinkedIn</a>
+                </div>
+                <div class="skills">
+                    <h3>Technical Skills</h3>
+                    <ul id="skills-list"></ul>
+                </div>
+                <div class="hobbies">
+                    <h3>Hobbies</h3>
+                    <ul id="hobbies-list"></ul>
+                </div>
+            </div>
+            <div class="main-content">
+                <div class="section work-experience">
+                    <h3>Work Experience in previous company</h3>
+                    <p id="work-company-name"></p>
+                    <p id="work-position"></p>
+                    <p id="work-start-end-dates"></p>
+                    <p id="work-summary"></p>
+                </div>
+                <div class="section projects">
+                    <h3>Projects</h3>
+                    <p id="project-description"></p>
+                </div>
+                <div class="section education">
+                    <h3>Education</h3>
+                    <p id="education-ug"></p>
+                    <p id="education-senior-secondary"></p>
+                    <p id="education-high-school"></p>
+                </div>
+                <div class="section internship">
+                    <h3>Internship</h3>
+                    <p id="internship-company-name"></p>
+                    <p id="internship-position"></p>
+                    <p id="internship-start-end-dates"></p>
+                    <p id="internship-summary"></p>
+                </div>
+                <div class="section achievements">
+                    <h3>Achievements</h3>
+                    <p id="achievements-summary"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- No results found message placeholder -->
+    <div id="no-results" style="display: none;" class="no-results">
+        <img src="sad.jpg" alt="No results found">
+        <p>No such results found</p>
+    </div>
+
+    <script src="resume.js"></script>
+</body>
+</html>
